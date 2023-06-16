@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tiktok Coins Buy and Recharge by wysyłać Prezenty | TikTok</title>
+  <link rel="shortcut icon" href="tiktok_icon_logo.jpg">
+  <style>
+    body {
+      margin: px;
+      padding: px;
+      font-family: 'proxima-nova', sans-serif;
+      font-size:24px;
+    }
+
+header {
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+header img {
+max-width: 150px;
+  max-height: 150px;
+}
+
+content {
+padding: 20px;
+}
+
+content img {
+max-width: 200px;
+  max-height: 200px;
+}
+
+search-container {
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+search-container h2 {
+margin-bottom: 5px;
+}
+
+search-container input[type="text"] {
+width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+search-container button {
+margin-left: auto;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.search-container p {
+margin-top: 10px;
+}
+
+.top-up-buttons-container {
+
+  flex-direction: column; /* Zmieniony flex-direction na 'column' */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+top-up-buttons-row {
+
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-up-button {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 230px;
+  height: 96px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  border-color: ghostwhite;
+}
+
+.top-up-button:hover {
+  border-color:red;
+}
+
+.top-up-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0px red;
+}
+
+.top-up-button span {
+  margin-right: 5px;
+}
+
+.top-up-button img { 
+  width: 30px; 
+  margin-right: 12px;
+
+
+}
+
+.top-up-button p {
+  margin-top: 5px;
+}
+bottom-right-image {
+position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid gray;
+}
+.buttonn {
+    background-color: #FE2C55;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 170px;
+
+}
+.buttonn:hover{
+  background-color: #dE2C55
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    width: 650px;
+    height: 350px;
+    background-color: white;
+    padding: 20px;
+    text-align:center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .klepsydra{
+    border:2px solid;
+    border-color:gray;
+    border-radius:50%;
+    position: relative;
+    left: 30px;
+    transform: translateY(-10px);
+
+  }
+  .timer {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .krzyzyk{
+      text-align:top;
+      float:right;
+      width:50px;
+      height:50px;
+      margin-top:0;
+      margin-right:0;
+    }
+    .pay{
+      font-size:30px;
+      font-style:bold;
+      font-weight: 700;
+      text-align:center;
+    }
+    #c{
+      display: none;
+      position: relative;
+      right: 0px;
+      font-size:24px;
+    }
+    #baton {
+    background-color: #FE2C55;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width:650px;
+    height:50px;
+}
+#baton:hover{
+  background-color: #dE2C55
+}
+.result{
+  position: relative;
+    left: 70px;
+    transform: translateY(-51px);
+    position: absolute;
+}
+#clear-button{
+  position: relative;
+  transform: translateY(-4px);
+}
+</style>
+</head>
+<body>
+  <div id="header">
+    <img src="obraz3.jpg" alt="Obrazek 3" style="max-width: 1000px; max-height: 1000px;" width="190px" height="70px">
+    <img src="obraz1.jpg" alt="Obrazek 1" style="max-width: 1000px; max-height: 1000px;" width="530px" height="50px">
+    <img src="obraz2.jpg" alt="Obrazek 2" style="max-width: 1000px; max-height: 1000px;" width="300px" height="65px">
+  </div>
+  <div id="content">
+    <div id="search-container">
+      <h2 style="margin-top: 0; font-size: 25px; margin-top: 40px;">Get Coins</h2>
+
+<div id="search-input-container">
+    <input style="width: 250px; height: 40px; border-bottom-left-radius: 7px; font-size:24px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    " type="text" id="search-input" placeholder="Enter username">
+    <button id="clear-button" style="height: 40px; width: 40px; font-weight: bold;">X</button>
+  </div>
+
+<h2 style="font-size: 25px;">Recharge</h2>
+
+<div id="top-up-buttons-container">
+    <div id="top-up-buttons-row">
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">70</h1>
+        </div>
+        ㅤ
+        $ 0.74
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">350</h1>
+        </div>
+        ㅤ
+        $3.7
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">700</h1>
+        </div>
+        ㅤ
+        $ 7.4
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;" >
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">1,400</h1>
+        </div>
+        ㅤ
+        $ 14.8
+      </button>
+    </div>
+    <div id="top-up-buttons-row">
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">3,500</h1>
+        </div>
+        ㅤ
+        $ 37
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">7,000</h1>
+        </div>
+        ㅤ
+        $ 74
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">17,500</h1>
+        </div>
+        ㅤ
+        $ 185
+      </button>
+      <button class="top-up-button">
+        <div style="display: flex; align-items: center;">
+          <img src="pieniadz.png" alt="Małe zdjęcie" id="malezdj">
+          <h1 style="margin-right: 5px;">Custom</h1>
+        </div>
+        <p>30 - 2,500,000</p>
+      </button>
+      <br>
+      <a style="font-size:20px;">Payment method<img style="margin: top 20px; align-items: center; margin-bottom: -3px;" src="platnosc1.png"></a><br>
+      <a style="font-size:25px; align-items: center; margin-right: 30px;">Total: </a><div class="result"></div>
+
+  <div id="overlay" class="overlay">
+  <div id="modal" class="modal">
+    <form><input class="krzyzyk" id="k" type="image" src="krzyżyk.png" onclick="closeModal()"></form>
+    <img id="tik-image" class="image" src="tik.png" style="display: none; width:50px; height:50px; position: relative; left: 300px;">
+    <p id="modal-content"><img class="klepsydra" src="Hourglass_icon.png" width="50px" height="50px">
+    <p class="pay" id="a">Processing your payment<br></p>
+    <p id="b">this could take a few seconds</p>
+    <h2 style="text-align: center; font-size:18px; font-weight: normal;" id="modal-title">5:00</h2>
+    <p id="c">Payment method </p>
+    <img id="paypal-image" class="image" src="paypal.png" style="display: none; width:80px; height:50px; position: relative; left: 280px; transform: translateY(0px);">
+    <form><input style="position: relative; transform: translateY(30px); display:none" type="button" id="baton" value="Go back" onclick="odswiezStrone()"></form>
+  </div>
+</div> 
+          <div class="timer" id="timer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<b><input type="button" class="buttonn" value="Recharge" onclick="openModal()"></b>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const clearButton = document.getElementById('clear-button');
+
+searchInput.addEventListener('input', () => {
+  if (searchInput.value.length > 0) {
+    clearButton.style.display = 'inline-block';
+  } else {
+    clearButton.style.display = 'none';
+  }
+});
+
+clearButton.addEventListener('click', () => {
+  searchInput.value = '';
+  clearButton.style.display = 'none';
+});
+
+// Ukryj przycisk "Clear" na początku
+if (searchInput.value.length === 0) {
+  clearButton.style.display = 'none';
+}
+
+
+
+var topUpButton = document.getElementsByClassName('top-up-button');
+
+for (var i = 0; i < topUpButton.length; i++) {
+  topUpButton[i].addEventListener('click', function(e) {
+    e.stopPropagation();
+    this.style.borderColor = 'red';
+  });
+
+document.addEventListener('click', function() {
+    for (var j = 0; j < topUpButton.length; j++) {
+      topUpButton[j].style.borderColor = 'gray';
+    }
+  });
+}
+
+const buttons = document.querySelectorAll('.top-up-button');
+const result = document.querySelector('.result');
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Usuń wcześniejsze elementy
+    while (result.firstChild) {
+      result.removeChild(result.firstChild);
+    }
+
+    if (index === 7) {
+      // Tworzenie kontenera
+      const container = document.createElement('div');
+      container.style.marginTop = '20px'; // Przesunięcie o 10 pikseli w dół
+
+      // Tworzenie pola tekstowego i przycisku wewnątrz kontenera
+      const input = document.createElement('input');
+      input.type = 'number';
+
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'OK';
+
+      // Dodawanie obsługi zdarzeń do przycisku OK
+      submitButton.addEventListener('click', () => {
+        const value = input.value;
+        const message = document.createElement('p');
+        message.textContent = ` ${value} $`; // Kwota
+        result.appendChild(message);
+        // Usuń pole tekstowe i przycisk po wprowadzeniu wartości
+        container.removeChild(input);
+        container.removeChild(submitButton);
+      });
+
+      // Dodawanie pola tekstowego i przycisku do kontenera
+      container.appendChild(input);
+      container.appendChild(submitButton);
+
+      // Dodawanie kontenera do kontenera result
+      result.appendChild(container);
+    } else {
+      const value = button.innerHTML.split('ㅤ')[1];
+      const message = document.createElement('p');
+      message.textContent = ` ${value}`; // Kwota
+      result.appendChild(message);
+    }
+  });
+});
+
+
+
+function openModal() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "flex";
+
+  startTimer();
+}
+
+function startTimer() {
+  var minutes = 5;
+  var seconds = 0;
+
+  var timerInterval = setInterval(function() {
+    seconds--;
+
+    if (seconds < 0) {
+      minutes--;
+      seconds = 59;
+    }
+
+    var modalTitle = document.getElementById("modal-title");
+    modalTitle.textContent = ""+ formatTime(minutes) + ":" + formatTime(seconds);
+
+    if (minutes === 4 && seconds === 55) {
+      clearInterval(timerInterval);
+      openNextModal();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  return time < 10 ? "0" + time : time;
+}
+
+function openNextModal() {
+  var overlay = document.getElementById("overlay");
+  var modalTitle = document.getElementById("modal-title");
+  var modalContent = document.getElementById("modal-content");
+  var tikImage = document.getElementById("tik-image");
+  var paypalImage = document.getElementById("paypal-image");
+  var baton = document.getElementById("baton");
+  var c = document.getElementById("c");
+  var k = document.getElementById("k");
+
+  modalTitle.textContent = "You recharged coins. The coins can be used to send virtual gifts.";
+  modalContent.textContent = "Payment completed";
+  tikImage.style.display = "block";
+  paypalImage.style.display = "block";
+  baton.style.display = "block";
+  c.style.display = "block";
+  k.style.display = "none";
+  a.textContent = "";
+  b.textContent = "";
+
+  overlay.style.display = "flex";
+}
+
+function closeModal() {
+  var overlay = document.getElementById("overlay");
+  var tikImage = document.getElementById("tik-image");
+  var paypalImage = document.getElementById("paypal-image");
+  var c = document.getElementById("c");
+  overlay.style.display = "none";
+  tikImage.style.display = "none";
+  paypalImage.style.display = "none";
+  c.style.display = "none";
+  
+}
+function odswiezStrone() {
+      location.reload();
+    }
+</script>
+</body>
+</html>
